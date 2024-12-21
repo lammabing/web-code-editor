@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="top-menu">
+    <div class="logo">Web Code Editor</div>
+    <div class="menu-items">
+        <button id="newBtn" title="New"><i class="fas fa-file"></i></button>
+        <select id="loadProject" title="Load Project">
+            <option value="">Load Project...</option>
+        </select>
+        <button id="saveBtn" title="Save"><i class="fas fa-save"></i></button>
+        <button id="uploadBtn" title="Upload File"><i class="fas fa-upload"></i></button>
+        <button id="loadJsonBtn" title="Load JSON"><i class="fas fa-file-import"></i></button>
+        <input type="file" id="fileInput" style="display: none">
+        <input type="file" id="jsonFileInput" accept=".json" style="display: none">
+    </div>
+</nav>
+
+<div class="main-container">
+    <div class="editor-container">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="html" title="HTML"><i class="fab fa-html5"></i></button>
+            <button class="tab-btn" data-tab="css" title="CSS"><i class="fab fa-css3-alt"></i></button>
+            <button class="tab-btn" data-tab="js" title="JavaScript"><i class="fab fa-js"></i></button>
+            <button class="tab-btn" data-tab="data" title="Data"><i class="fas fa-database"></i></button>
+            <button class="tab-btn" data-tab="jsonify" title="JSONify"><i class="fas fa-code"></i></button>
+        </div>
+        <div class="editor-panels">
+            <textarea id="htmlEditor" class="editor active" spellcheck="false"></textarea>
+            <textarea id="cssEditor" class="editor" spellcheck="false"></textarea>
+            <textarea id="jsEditor" class="editor" spellcheck="false"></textarea>
+            <textarea id="dataEditor" class="editor" spellcheck="false"></textarea>
+            <textarea id="jsonifyEditor" class="editor" spellcheck="false"></textarea>
+        </div>
+    </div>
+    <div class="preview-container">
+        <iframe id="preview"></iframe>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
