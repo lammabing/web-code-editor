@@ -1,6 +1,6 @@
 # Web Code Editor
 
-A web-based code editor with real-time preview, built using Node.js and Express.js.
+A web-based html, css, javascript and json data with realtime preview developed in node.js and express.
 
 ## Features
 
